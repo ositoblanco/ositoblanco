@@ -1,0 +1,25 @@
+<!-- Fila siguiente -->
+<br>
+<div class="row">
+  <div class="col-sm-3">      
+  </div>
+  <div class="col-sm-6">
+      <h3 class="text-center">Regístrate</h3>
+      <br>
+      <form #registroForm="ngForm" (ngSubmit)="registro(registroForm)">
+            <label for="exampleInputName">Nombre</label>
+            <input type="text" class="form-control" name="nombre" id="nombre" aria-describedby="nameHelp" placeholder="Ingresa Nombre">
+            <label for="exampleInputLastName">Apellido</label>
+            <input type="text" class="form-control" name="apellido" id="apellido" aria-describedby="lastHelp" placeholder="Ingresa Apellido">
+            <label for="exampleInputUsuario">Usuario</label>
+            <input type="text" class="form-control" name="usuario" id="usuario" aria-describedby="usuarioHelp" placeholder="Ingresa Usuario">
+            <label for="exampleInputEmail">Correo</label>
+            <input type="text" class="form-control" name="correo" id="correo" aria-describedby="emailHelp" placeholder="Ingresa Correo">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" name="clave" id="clave" placeholder="Password">
+            <br>
+            <button class="btn btn-primary">Registrar</button>
+        </form>
+        
+  </div>
+</div>

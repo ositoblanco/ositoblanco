@@ -1,0 +1,19 @@
+import { Component, OnInit } from '@angular/core';
+import { NgForm, FormGroup} from '@angular/forms';
+
+@Component({
+  selector: 'app-registro',
+  templateUrl: './registro.component.html',
+  styleUrls: ['./registro.component.css']
+})
+export class RegistroComponent implements OnInit {
+
+  constructor() { }
+
+  ngOnInit() {
+  }
+
+  registro(form: NgForm){
+    console.log("esto es lo que trae el formulario", form.value.nombre);
+  }
+}
