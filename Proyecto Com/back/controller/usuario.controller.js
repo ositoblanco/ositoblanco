@@ -14,6 +14,20 @@ users.getUsers = (request, response) => {
     });
 };
 
+//funcion que trae un usuario con usuario y contraseña
+users.getUserLogin = (request, response) => {
+    var usuario = request.params.usuario;
+    var clave = request.params.clave;
+    var consulta = `select * from usuario where Usuario_Usuario='${usuario}' and Clave_Usuario='${clave}'`;
+
+    //la conexion ejecute esa consulta
+    conection.query(consulta, function (error, results) {
+        if (error) throw response.json({ errorinfo: error });
+        else response.json(results);
+        console.log('Done lista usuarios');
+    });
+};
+
 //Crear usuario 
 users.postUser = (request, response) => {
     var nombre = request.body.Nombre_Usuario;

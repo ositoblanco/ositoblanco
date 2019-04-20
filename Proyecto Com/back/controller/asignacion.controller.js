@@ -14,6 +14,20 @@ asigns.getAsigns = (request, response) => {
     });
 };
 
+//funcion que trae las asignaciones de un usuario en especifico
+asigns.getAsigUser = (request, response) => {
+    var id_Usuario = request.params.id_Usuario;
+
+    var consulta = `select * from Asignacion_Unidad where id_Usuario = ${id_Usuario}`;
+
+    //la conexion ejecute esa consulta
+    conection.query(consulta, function (error, results) {
+        if (error) throw response.json({ errorinfo: error });
+        else response.json(results);
+        console.log('Done lista Asignacion Unidad');
+    });
+};
+
 //Crear nueva asignacion
 asigns.postAsign = (request, response) => {
     var avance = request.body.Porcentaje_Avance;

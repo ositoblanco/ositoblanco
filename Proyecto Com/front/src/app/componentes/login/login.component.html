@@ -1,4 +1,4 @@
-<!-- Fila siguiente -->
+<app-barra-navegacion></app-barra-navegacion>
 <br>
 <div class="row">
   <div class="col-sm-3">      
@@ -6,17 +6,15 @@
   <div class="col-sm-6">
       <h3>Titulo</h3>
       <br><br>
-      <form>
+      <form #formLogin="ngForm" (ngSubmit)="login(formLogin)">
           <div class="form-group">
             <label for="exampleInputEmail">Usuario</label>
-            <input type="text" class="form-control" id="usuario" aria-describedby="emailHelp" placeholder="Ingresa Usuario">
-          </div>
-          <div class="form-group">
+            <input type="text" class="form-control" id="usuario" name="Usuario_Usuario" [(ngModel)]="usuarioService.usuario.Usuario_Usuario" placeholder="Ingresa Usuario" required>
+            <br>
             <label for="exampleInputPassword1">Password</label>
-            <input type="password" class="form-control" id="clave" placeholder="Password">
+            <input type="password" class="form-control" id="clave" name="Clave_Usuario" [(ngModel)]="usuarioService.usuario.Clave_Usuario" placeholder="Password" required>
           </div>
-          <button class="btn btn-primary" (click)="ingresar()">Ingresar</button>
-        </form>
-        
+          <button class="btn btn-primary" [disabled]="!formLogin.valid">Ingresar</button>
+        </form>        
   </div>
 </div>

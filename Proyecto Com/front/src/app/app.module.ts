@@ -1,6 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import {FormsModule} from '@angular/forms';
+import { HttpClientModule} from '@angular/common/http';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UsuarioComponent } from './componentes/usuario/usuario.component';
@@ -10,6 +13,8 @@ import { AsignacionComponent } from './componentes/asignacion/asignacion.compone
 import { LoginComponent } from './componentes/login/login.component';
 import { InicioComponent } from './componentes/inicio/inicio.component';
 import { RegistroComponent } from './componentes/registro/registro.component';
+import { BarraNavegacionComponent } from './componentes/barra-navegacion/barra-navegacion.component';
+import { PrincipalEstudianteComponent } from './componentes/principal-estudiante/principal-estudiante.component';
 
 @NgModule({
   declarations: [
@@ -20,11 +25,15 @@ import { RegistroComponent } from './componentes/registro/registro.component';
     AsignacionComponent,
     LoginComponent,
     InicioComponent,
-    RegistroComponent
+    RegistroComponent,
+    BarraNavegacionComponent,
+    PrincipalEstudianteComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
