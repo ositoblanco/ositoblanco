@@ -22,7 +22,7 @@ export class LoginComponent implements OnInit {
           this.usuarioService.usuario = res as Usuario;
           if(Object.keys(res).length > 0){
             var hash = btoa(this.usuarioService.usuario[0].id_Usuario);
-            this.router.navigate([`principal-estudiante/${btoa(this.usuarioService.usuario[0].id_Usuario)}`]);
+            this.router.navigate([`principal-estudiante/${hash}`]);
           }else{
             alert("Usuario o Contraseña incorrecta!");
           }

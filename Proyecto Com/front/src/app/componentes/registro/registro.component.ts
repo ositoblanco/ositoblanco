@@ -18,11 +18,10 @@ export class RegistroComponent implements OnInit {
 
   registro(form: NgForm) {
     if (form.value.ConfirmaClave_Usuario == form.value.Clave_Usuario) {
-      form.value.id_Rol = 1;
+      form.value.id_Rol = 2;
       this.usuarioService.postUsuario(form.value)
         .subscribe(res => {
-          console.log("Form -> ", form.value);
-          console.log("Usuario registrado con exito");
+          alert("Usuario registrado exitosamente!");
           this.resetForm(form);
         });
     }else{

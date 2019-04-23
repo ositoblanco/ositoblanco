@@ -23,5 +23,5 @@ export class Usuario {
     Usuario_Usuario: string;
     Apellido_Usuario: string;
     id_Rol: number;
-
+    
 }
