@@ -16,6 +16,7 @@ export class PrincipalEstudianteComponent implements OnInit {
   ruta: string[];
   encriptada: string[];
   id_usuario: string;
+  preguntas_correctas = 0;
 
   constructor(private usuarioService: UsuarioService, private asignacionService: AsignacionService, private router: Router) {
     this.ruta = this.router.url.split('/');
@@ -28,16 +29,47 @@ export class PrincipalEstudianteComponent implements OnInit {
     this.getAsignacionesUsuario(atob(this.encriptada[0]));
   }
 
-  getAsignacionesUsuario(id_Usuario: string){
+  getAsignacionesUsuario(id_Usuario: string) {
     this.asignacionService.getAsignacionesUsuario(id_Usuario)
       .subscribe(res => {
         this.asignacionService.asignaciones = res as Asignacion[];
-        if(Object.keys(res).length > 0){
-          alert("El usuario ya hizo el examen");
-        }else{
-          alert("El usuario no ha hecho el examen!");
+        if (Object.keys(res).length > 0) {
+          this.router.navigate([`dashboard/${btoa(atob(this.encriptada[0]))}`]);
+        } else {
         }
       });
-}
+  }
+
+  calificar(){
+    var elementos = document.forms["formExamen"].elements;
+    
+    var checks = 0;
+    for (let i = 0; i < elementos.length; i++) {
+      if(elementos[i].checked){
+        checks += 1;
+      }      
+    }
+    
+    if(checks == 5){
+    for (let i = 0; i < elementos.length; i++) {
+      if(elementos[i].checked){
+        if(elementos[i].id == "pre1opc1"){
+          this.preguntas_correctas += 1;
+        }else if(elementos[i].id == "pre2opc1"){
+          this.preguntas_correctas += 1;
+        }else if(elementos[i].id == "pre3opc1"){
+          this.preguntas_correctas += 1;
+        }else if(elementos[i].id == "pre4opc1"){
+          this.preguntas_correctas += 1;
+        }else if(elementos[i].id == "pre5opc1"){
+          this.preguntas_correctas += 1;
+        }
+      }
+    }
+    console.log('El estudiante optuvo correctas! ',this.preguntas_correctas );
+  }else{
+    alert("Por favor conteste todas las preguntas!")
+  }
+  }
 
 }

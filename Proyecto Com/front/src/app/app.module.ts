@@ -15,6 +15,7 @@ import { InicioComponent } from './componentes/inicio/inicio.component';
 import { RegistroComponent } from './componentes/registro/registro.component';
 import { BarraNavegacionComponent } from './componentes/barra-navegacion/barra-navegacion.component';
 import { PrincipalEstudianteComponent } from './componentes/principal-estudiante/principal-estudiante.component';
+import { DashboardComponent } from './componentes/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { PrincipalEstudianteComponent } from './componentes/principal-estudiante
     InicioComponent,
     RegistroComponent,
     BarraNavegacionComponent,
-    PrincipalEstudianteComponent
+    PrincipalEstudianteComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,

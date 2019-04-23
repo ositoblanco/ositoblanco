@@ -1,2 +1,164 @@
 <app-barra-navegacion></app-barra-navegacion>
-<p>listo para validar si el usuario ya hizo el examen inicial</p>
+<br>
+<div class="row">
+  <div class="col-sm-2">
+  </div>
+  <div class="col-sm-8">
+    <h3 class="text-center">Por favor conteste todas las preguntas del siguiente exámen!</h3>
+    <br>
+    <form class="was-validated" name="formExamen" #formExamen="ngForm" (ngSubmit)="calificar()">
+      <div class="row">
+        <p>Esta es la pregunta 1: </p>
+      </div>
+      <div class="row">
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="pre1opc1" name="pregunta1" required>
+          <label class="custom-control-label" for="pre1opc1">Pregunta 1 opcion 1</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="pre1opc2" name="pregunta1" required>
+          <label class="custom-control-label" for="pre1opc2">Pregunta 1 opcion 2</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="pre1opc3" name="pregunta1" required>
+          <label class="custom-control-label" for="pre1opc3">Pregunta 1 opcion 3</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="pre1opc4" name="pregunta1" required>
+          <label class="custom-control-label" for="pre1opc4">Pregunta 1 opcion 4</label>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="row">
+        <p>Esta es la pregunta 2: </p>
+      </div>
+      <div class="row">
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="pre2opc1" name="pregunta2" required>
+          <label class="custom-control-label" for="pre2opc1">Pregunta 2 opcion 1</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="pre2opc2" name="pregunta2" required>
+          <label class="custom-control-label" for="pre2opc2">Pregunta 2 opcion 2</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="pre2opc3" name="pregunta2" required>
+          <label class="custom-control-label" for="pre2opc3">Pregunta 2 opcion 3</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="pre2opc4" name="pregunta2" required>
+          <label class="custom-control-label" for="pre2opc4">Pregunta 2 opcion 4</label>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="row">
+        <p>Esta es la pregunta 3: </p>
+      </div>
+      <div class="row">
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="pre3opc1" name="pregunta3" required>
+          <label class="custom-control-label" for="pre3opc1">Pregunta 3 opcion 1</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="pre3opc2" name="pregunta3" required>
+          <label class="custom-control-label" for="pre3opc2">Pregunta 3 opcion 2</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="pre3opc3" name="pregunta3" required>
+          <label class="custom-control-label" for="pre3opc3">Pregunta 3 opcion 3</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="pre3opc4" name="pregunta3" required>
+          <label class="custom-control-label" for="pre3opc4">Pregunta 3 opcion 4</label>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="row">
+        <p>Esta es la pregunta 4: </p>
+      </div>
+      <div class="row">
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="pre4opc1" name="pregunta4" required>
+          <label class="custom-control-label" for="pre4opc1">Pregunta 4 opcion 1</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="pre4opc2" name="pregunta4" required>
+          <label class="custom-control-label" for="pre4opc2">Pregunta 4 opcion 2</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="pre4opc3" name="pregunta4" required>
+          <label class="custom-control-label" for="pre4opc3">Pregunta 4 opcion 3</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="pre4opc4" name="pregunta4" required>
+          <label class="custom-control-label" for="pre4opc4">Pregunta 4 opcion 4</label>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="row">
+        <p>Esta es la pregunta 5: </p>
+      </div>
+      <div class="row">
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="pre5opc1" name="pregunta5" required>
+          <label class="custom-control-label" for="pre5opc1">Pregunta 5 opcion 1</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="pre5opc2" name="pregunta5" required>
+          <label class="custom-control-label" for="pre5opc2">Pregunta 5 opcion 2</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="pre5opc3" name="pregunta5" required>
+          <label class="custom-control-label" for="pre5opc3">Pregunta 5 opcion 3</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="pre5opc4" name="pregunta5" required>
+          <label class="custom-control-label" for="pre5opc4">Pregunta 5 opcion 4</label>
+        </div>
+      </div>
+
+      <hr>
+
+      <button class="btn btn-primary">Terminar Exámen</button>
+    </form>
+    <br>
+  </div>
+</div>
