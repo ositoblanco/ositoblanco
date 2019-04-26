@@ -66,10 +66,12 @@ export class PrincipalEstudianteComponent implements OnInit {
         }
       }
     }
-    console.log('El estudiante optuvo correctas! ',this.preguntas_correctas );
+    alert('El estudiante optuvo correctas! '+this.preguntas_correctas );
   }else{
     alert("Por favor conteste todas las preguntas!")
   }
   }
+
+  
 
 }

@@ -71,9 +71,9 @@ select * from Asignacion_Unidad;
 desc Asignacion_Unidad;
 
 -- Insercion de una asignacion en la tabla asignacion
-insert into Asignacion_Unidad (id_Usuario, id_Unidad, Porcentaje_Avance) values (4, 1, 20);
-insert into Asignacion_Unidad (id_Usuario, id_Unidad, Porcentaje_Avance) values (4, 2, 35);
-insert into Asignacion_Unidad (id_Usuario, id_Unidad, Porcentaje_Avance) values (4, 3, 50);
+insert into Asignacion_Unidad (id_Usuario, id_Unidad, Porcentaje_Avance) values (1, 1, 20);
+insert into Asignacion_Unidad (id_Usuario, id_Unidad, Porcentaje_Avance) values (1, 2, 35);
+insert into Asignacion_Unidad (id_Usuario, id_Unidad, Porcentaje_Avance) values (1, 3, 50);
 
 -- Actualizar una asignacion en la tabla asignacion
 update Asignacion_Unidad set Porcentaje_Avance = 10 where id_Unidad = 3 and id_Usuario = 4;
