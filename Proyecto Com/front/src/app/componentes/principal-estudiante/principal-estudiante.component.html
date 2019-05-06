@@ -1,164 +1,676 @@
 <app-barra-navegacion></app-barra-navegacion>
 <br>
-<div class="row">
-  <div class="col-sm-2">
+<h3 class="text-center">Por favor conteste todas las preguntas del siguiente exámen!</h3>
+<br>
+<form class="was-validated" name="formExamen" #formExamen="ngForm" (ngSubmit)="calificar()">
+
+
+  <div class="row">
+    <div class="col-sm-1">
+    </div>
+    <div class="col-sm-4">
+      <p><b>Pregunta 1.</b> Int, char, float, string y boolean son: </p>
+
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="pre1opc1" name="pregunta1" required>
+        <label class="custom-control-label" for="pre1opc1">Sentencias de control</label>
+      </div>
+
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="pre1opc2" name="pregunta1" required>
+        <label class="custom-control-label" for="pre1opc2">Funciones</label>
+      </div>
+
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="pre1opc3" name="pregunta1" required>
+        <label class="custom-control-label" for="pre1opc3">Tipo de datos</label>
+      </div>
+    </div>
+    <div class="col-sm-2">
+    </div>
+    <div class="col-sm-4">
+      <p><b>Pregunta 2.</b> Qué tipo de variable es: char variable: </p>
+
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="pre1opc1" name="pregunta2" required>
+        <label class="custom-control-label" for="pre1opc1">Cadena</label>
+      </div>
+
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="pre1opc2" name="pregunta2" required>
+        <label class="custom-control-label" for="pre1opc2">Entero</label>
+      </div>
+
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="pre1opc3" name="pregunta2" required>
+        <label class="custom-control-label" for="pre1opc3">Carácter</label>
+      </div>
+    </div>
   </div>
-  <div class="col-sm-8">
-    <h3 class="text-center">Por favor conteste todas las preguntas del siguiente exámen!</h3>
-    <br>
-    <form class="was-validated" name="formExamen" #formExamen="ngForm" (ngSubmit)="calificar()">
-      <div class="row">
-        <p>Esta es la pregunta 1: </p>
-      </div>
-      <div class="row">
-        <div class="custom-control custom-radio">
-          <input type="radio" class="custom-control-input" id="pre1opc1" name="pregunta1" required>
-          <label class="custom-control-label" for="pre1opc1">Pregunta 1 opcion 1</label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="custom-control custom-radio">
-          <input type="radio" class="custom-control-input" id="pre1opc2" name="pregunta1" required>
-          <label class="custom-control-label" for="pre1opc2">Pregunta 1 opcion 2</label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="custom-control custom-radio">
-          <input type="radio" class="custom-control-input" id="pre1opc3" name="pregunta1" required>
-          <label class="custom-control-label" for="pre1opc3">Pregunta 1 opcion 3</label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="custom-control custom-radio">
-          <input type="radio" class="custom-control-input" id="pre1opc4" name="pregunta1" required>
-          <label class="custom-control-label" for="pre1opc4">Pregunta 1 opcion 4</label>
-        </div>
+  <hr>
+
+  <div class="row">
+    <div class="col-sm-1">
+    </div>
+    <div class="col-sm-4">
+      <p><b>Pregunta 3.</b> Permite el ingreso de datos: </p>
+
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="pre1opc1" name="pregunta3" required>
+        <label class="custom-control-label" for="pre1opc1">Impresión de resultados</label>
       </div>
 
-      <hr>
-
-      <div class="row">
-        <p>Esta es la pregunta 2: </p>
-      </div>
-      <div class="row">
-        <div class="custom-control custom-radio">
-          <input type="radio" class="custom-control-input" id="pre2opc1" name="pregunta2" required>
-          <label class="custom-control-label" for="pre2opc1">Pregunta 2 opcion 1</label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="custom-control custom-radio">
-          <input type="radio" class="custom-control-input" id="pre2opc2" name="pregunta2" required>
-          <label class="custom-control-label" for="pre2opc2">Pregunta 2 opcion 2</label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="custom-control custom-radio">
-          <input type="radio" class="custom-control-input" id="pre2opc3" name="pregunta2" required>
-          <label class="custom-control-label" for="pre2opc3">Pregunta 2 opcion 3</label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="custom-control custom-radio">
-          <input type="radio" class="custom-control-input" id="pre2opc4" name="pregunta2" required>
-          <label class="custom-control-label" for="pre2opc4">Pregunta 2 opcion 4</label>
-        </div>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="pre1opc2" name="pregunta3" required>
+        <label class="custom-control-label" for="pre1opc2">Datos de entrada</label>
       </div>
 
-      <hr>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="pre1opc3" name="pregunta3" required>
+        <label class="custom-control-label" for="pre1opc3">Procesamientos de datos</label>
+      </div>
+    </div>
+    <div class="col-sm-2">
+    </div>
+    <div class="col-sm-4">
+      <p><b>Pregunta 4.</b> Qué es un algoritmo: </p>
 
-      <div class="row">
-        <p>Esta es la pregunta 3: </p>
-      </div>
-      <div class="row">
-        <div class="custom-control custom-radio">
-          <input type="radio" class="custom-control-input" id="pre3opc1" name="pregunta3" required>
-          <label class="custom-control-label" for="pre3opc1">Pregunta 3 opcion 1</label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="custom-control custom-radio">
-          <input type="radio" class="custom-control-input" id="pre3opc2" name="pregunta3" required>
-          <label class="custom-control-label" for="pre3opc2">Pregunta 3 opcion 2</label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="custom-control custom-radio">
-          <input type="radio" class="custom-control-input" id="pre3opc3" name="pregunta3" required>
-          <label class="custom-control-label" for="pre3opc3">Pregunta 3 opcion 3</label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="custom-control custom-radio">
-          <input type="radio" class="custom-control-input" id="pre3opc4" name="pregunta3" required>
-          <label class="custom-control-label" for="pre3opc4">Pregunta 3 opcion 4</label>
-        </div>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="pre1opc1" name="pregunta4" required>
+        <label class="custom-control-label" for="pre1opc1">Diagrama de flujo </label>
       </div>
 
-      <hr>
-
-      <div class="row">
-        <p>Esta es la pregunta 4: </p>
-      </div>
-      <div class="row">
-        <div class="custom-control custom-radio">
-          <input type="radio" class="custom-control-input" id="pre4opc1" name="pregunta4" required>
-          <label class="custom-control-label" for="pre4opc1">Pregunta 4 opcion 1</label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="custom-control custom-radio">
-          <input type="radio" class="custom-control-input" id="pre4opc2" name="pregunta4" required>
-          <label class="custom-control-label" for="pre4opc2">Pregunta 4 opcion 2</label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="custom-control custom-radio">
-          <input type="radio" class="custom-control-input" id="pre4opc3" name="pregunta4" required>
-          <label class="custom-control-label" for="pre4opc3">Pregunta 4 opcion 3</label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="custom-control custom-radio">
-          <input type="radio" class="custom-control-input" id="pre4opc4" name="pregunta4" required>
-          <label class="custom-control-label" for="pre4opc4">Pregunta 4 opcion 4</label>
-        </div>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="pre1opc2" name="pregunta4" required>
+        <label class="custom-control-label" for="pre1opc2">Un programa</label>
       </div>
 
-      <hr>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="pre1opc3" name="pregunta4" required>
+        <label class="custom-control-label" for="pre1opc3">Serie de instrucciones que representan una solución </label>
+      </div>
+    </div>
+  </div>
+  <hr>
 
-      <div class="row">
-        <p>Esta es la pregunta 5: </p>
-      </div>
-      <div class="row">
-        <div class="custom-control custom-radio">
-          <input type="radio" class="custom-control-input" id="pre5opc1" name="pregunta5" required>
-          <label class="custom-control-label" for="pre5opc1">Pregunta 5 opcion 1</label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="custom-control custom-radio">
-          <input type="radio" class="custom-control-input" id="pre5opc2" name="pregunta5" required>
-          <label class="custom-control-label" for="pre5opc2">Pregunta 5 opcion 2</label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="custom-control custom-radio">
-          <input type="radio" class="custom-control-input" id="pre5opc3" name="pregunta5" required>
-          <label class="custom-control-label" for="pre5opc3">Pregunta 5 opcion 3</label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="custom-control custom-radio">
-          <input type="radio" class="custom-control-input" id="pre5opc4" name="pregunta5" required>
-          <label class="custom-control-label" for="pre5opc4">Pregunta 5 opcion 4</label>
-        </div>
+  <div class="row">
+    <div class="col-sm-1">
+    </div>
+    <div class="col-sm-4">
+      <p><b>Pregunta 5.</b> Función que Imprime texto pantalla: </p>
+
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="pre1opc1" name="pregunta5" required>
+        <label class="custom-control-label" for="pre1opc1">System.out.println </label>
       </div>
 
-      <hr>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="pre1opc2" name="pregunta5" required>
+        <label class="custom-control-label" for="pre1opc2">Scanner teclado = new Scanner (System.in)</label>
+      </div>
 
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="pre1opc3" name="pregunta5" required>
+        <label class="custom-control-label" for="pre1opc3">variable = teclado. nextLine ( ); </label>
+      </div>
+    </div>
+    <div class="col-sm-2">
+    </div>
+    <div class="col-sm-4">
+      <p><b>Pregunta 6.</b> El operador % hace referencia: </p>
+
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="pre1opc1" name="pregunta6" required>
+        <label class="custom-control-label" for="pre1opc1">Resultado de una división</label>
+      </div>
+
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="pre1opc2" name="pregunta6" required>
+        <label class="custom-control-label" for="pre1opc2">El resto o residuo de una división</label>
+      </div>
+
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="pre1opc3" name="pregunta6" required>
+        <label class="custom-control-label" for="pre1opc3">Multiplicación </label>
+      </div>
+    </div>
+  </div>
+  <hr>
+
+  <div class="row">
+    <div class="col-sm-1">
+    </div>
+    <div class="col-sm-4">
+      <p><b>Pregunta 7.</b> Símbolo que representa el inicio y fin de un diagrama de flujo: </p>
+
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="pre1opc1" name="pregunta7" required>
+        <label class="custom-control-label" for="pre1opc1">Circulo</label>
+      </div>
+
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="pre1opc2" name="pregunta7" required>
+        <label class="custom-control-label" for="pre1opc2">Rectángulo</label>
+      </div>
+
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="pre1opc3" name="pregunta7" required>
+        <label class="custom-control-label" for="pre1opc3">Círculo alargado</label>
+      </div>
+    </div>
+    <div class="col-sm-2">
+    </div>
+    <div class="col-sm-4">
+      <p><b>Pregunta 8.</b> Qué es un diagrama de flujo: </p>
+
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="pre1opc1" name="pregunta8" required>
+        <label class="custom-control-label" for="pre1opc1">Representación gráfica de un algoritmo</label>
+      </div>
+
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="pre1opc2" name="pregunta8" required>
+        <label class="custom-control-label" for="pre1opc2">Lluvia de ideas</label>
+      </div>
+
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="pre1opc3" name="pregunta8" required>
+        <label class="custom-control-label" for="pre1opc3">Mapa mental</label>
+      </div>
+    </div>
+  </div>
+  <hr>
+
+  <div class="row">
+    <div class="col-sm-1">
+    </div>
+    <div class="col-sm-4">
+      <p><b>Pregunta 9.</b> Como se lee un diagrama de flujo: </p>
+
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="pre1opc1" name="pregunta9" required>
+        <label class="custom-control-label" for="pre1opc1">De abajo hacia arriba</label>
+      </div>
+
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="pre1opc2" name="pregunta9" required>
+        <label class="custom-control-label" for="pre1opc2">De arriba hacia abajo</label>
+      </div>
+
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="pre1opc3" name="pregunta9" required>
+        <label class="custom-control-label" for="pre1opc3">Ninguna de las anteriores</label>
+      </div>
+    </div>
+    <div class="col-sm-2">
+    </div>
+    <div class="col-sm-4">
+      <p><b>Pregunta 10.</b> Qué es el pseudocódigo: </p>
+
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="pre1opc1" name="pregunta10" required>
+        <label class="custom-control-label" for="pre1opc1">Descripción de un algoritmo de forma detallada</label>
+      </div>
+
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="pre1opc2" name="pregunta10" required>
+        <label class="custom-control-label" for="pre1opc2">Diagrama de flujo</label>
+      </div>
+
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="pre1opc3" name="pregunta10" required>
+        <label class="custom-control-label" for="pre1opc3">Un programa</label>
+      </div>
+    </div>
+  </div>
+  <hr>
+
+  <div class="row">
+    <div class="col-sm-1">
+    </div>
+    <div class="col-sm-4">
+      <p><b>Pregunta 11.</b> Instrucción de pseudocódigo que va a mostrar información al usuario: </p>
+
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="pre1opc1" name="pregunta11" required>
+        <label class="custom-control-label" for="pre1opc1">Leer</label>
+      </div>
+
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="pre1opc2" name="pregunta11" required>
+        <label class="custom-control-label" for="pre1opc2">Imprimir</label>
+      </div>
+
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="pre1opc3" name="pregunta11" required>
+        <label class="custom-control-label" for="pre1opc3">Fin</label>
+      </div>
+    </div>
+    <div class="col-sm-2">
+    </div>
+    <div class="col-sm-4">
+      <p><b>Pregunta 12.</b> Qué instrucción indica que la información se guarda en una variable: </p>
+
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="pre1opc1" name="pregunta12" required>
+        <label class="custom-control-label" for="pre1opc1">Escribir -> variable</label>
+      </div>
+
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="pre1opc2" name="pregunta12" required>
+        <label class="custom-control-label" for="pre1opc2">Ingresar datos</label>
+      </div>
+
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="pre1opc3" name="pregunta12" required>
+        <label class="custom-control-label" for="pre1opc3">Leer -> variable</label>
+      </div>
+    </div>
+  </div>
+  <hr>
+
+  <div class="row">
+    <div class="col-sm-1">
+    </div>
+    <div class="col-sm-4">
+      <p><b>Pregunta 13.</b> Se identifican porque tienen una sola condición: </p>
+
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="pre1opc1" name="pregunta13" required>
+        <label class="custom-control-label" for="pre1opc1">Estructura selectivas doble</label>
+      </div>
+
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="pre1opc2" name="pregunta13" required>
+        <label class="custom-control-label" for="pre1opc2">Estructura selectivas simple</label>
+      </div>
+
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="pre1opc3" name="pregunta13" required>
+        <label class="custom-control-label" for="pre1opc3">Ninguna de las anteriores</label>
+      </div>
+    </div>
+    <div class="col-sm-2">
+    </div>
+    <div class="col-sm-4">
+      <p><b>Pregunta 14.</b> Si tengo suficiente dinero (condición relacional), comprar recuerdos; sino No comprar. Es
+        un ejemplo claro de: </p>
+
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="pre1opc1" name="pregunta14" required>
+        <label class="custom-control-label" for="pre1opc1">If, else</label>
+      </div>
+
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="pre1opc2" name="pregunta14" required>
+        <label class="custom-control-label" for="pre1opc2">For</label>
+      </div>
+
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="pre1opc3" name="pregunta14" required>
+        <label class="custom-control-label" for="pre1opc3">Do while</label>
+      </div>
+    </div>
+  </div>
+  <hr>
+
+  <div class="row">
+    <div class="col-sm-1">
+    </div>
+    <div class="col-sm-4">
+      <p><b>Pregunta 15.</b> Existen específicamente dos instrucciones selectivas: </p>
+
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="pre1opc1" name="pregunta15" required>
+        <label class="custom-control-label" for="pre1opc1">If y else </label>
+      </div>
+
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="pre1opc2" name="pregunta15" required>
+        <label class="custom-control-label" for="pre1opc2">For y while</label>
+      </div>
+
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="pre1opc3" name="pregunta15" required>
+        <label class="custom-control-label" for="pre1opc3">If y Switch</label>
+      </div>
+    </div>
+    <div class="col-sm-2">
+    </div>
+    <div class="col-sm-4">
+      <p><b>Pregunta 16.</b> If, else, for y while son: </p>
+
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="pre1opc1" name="pregunta16" required>
+        <label class="custom-control-label" for="pre1opc1">Sentencias de control</label>
+      </div>
+
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="pre1opc2" name="pregunta16" required>
+        <label class="custom-control-label" for="pre1opc2">Funciones</label>
+      </div>
+
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="pre1opc3" name="pregunta16" required>
+        <label class="custom-control-label" for="pre1opc3">Tipo de datos</label>
+      </div>
+    </div>
+  </div>
+  <hr>
+
+  <div class="row">
+    <div class="col-sm-1">
+    </div>
+    <div class="col-sm-4">
+      <p><b>Pregunta 17.</b> Son tres instrucciones repetitivas: </p>
+
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="pre1opc1" name="pregunta17" required>
+        <label class="custom-control-label" for="pre1opc1">While, Switch, do while </label>
+      </div>
+
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="pre1opc2" name="pregunta17" required>
+        <label class="custom-control-label" for="pre1opc2">While, for, Switch</label>
+      </div>
+
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="pre1opc3" name="pregunta17" required>
+        <label class="custom-control-label" for="pre1opc3">While, for, do while </label>
+      </div>
+    </div>
+    <div class="col-sm-2">
+    </div>
+    <div class="col-sm-4">
+      <p><b>Pregunta 18.</b> Cuando las instrucciones se ejecutan un cierto número finito de veces: </p>
+
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="pre1opc1" name="pregunta18" required>
+        <label class="custom-control-label" for="pre1opc1">Estructura selectiva doble</label>
+      </div>
+
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="pre1opc2" name="pregunta18" required>
+        <label class="custom-control-label" for="pre1opc2">Estructura selectivas simple</label>
+      </div>
+
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="pre1opc3" name="pregunta18" required>
+        <label class="custom-control-label" for="pre1opc3">Estructura repetitiva</label>
+      </div>
+    </div>
+  </div>
+  <hr>
+
+  <div class="row">
+    <div class="col-sm-1">
+    </div>
+    <div class="col-sm-4">
+      <p><b>Pregunta 19.</b> Puede tener una condición dentro de otra condición que esté en forma de cascada: </p>
+
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="pre1opc1" name="pregunta19" required>
+        <label class="custom-control-label" for="pre1opc1">Estructuras selectivas simple</label>
+      </div>
+
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="pre1opc2" name="pregunta19" required>
+        <label class="custom-control-label" for="pre1opc2">Estructura selectiva anidada</label>
+      </div>
+
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="pre1opc3" name="pregunta19" required>
+        <label class="custom-control-label" for="pre1opc3">Estructuras selectiva doble</label>
+      </div>
+    </div>
+    <div class="col-sm-2">
+    </div>
+    <div class="col-sm-4">
+      <p><b>Pregunta 20.</b> Estructura que contiene varios elementos de un mismo tipo y se guardan en una posición:
+      </p>
+
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="pre1opc1" name="pregunta20" required>
+        <label class="custom-control-label" for="pre1opc1">Arreglo</label>
+      </div>
+
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="pre1opc2" name="pregunta20" required>
+        <label class="custom-control-label" for="pre1opc2">Variable</label>
+      </div>
+
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="pre1opc3" name="pregunta20" required>
+        <label class="custom-control-label" for="pre1opc3">Función</label>
+      </div>
+    </div>
+  </div>
+  <hr>
+
+  <div class="row">
+    <div class="col-sm-1">
+    </div>
+    <div class="col-sm-4">
+      <p><b>Pregunta 21.</b> Los arreglos pueden ser vectores o matrices: </p>
+
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="pre1opc1" name="pregunta21" required>
+        <label class="custom-control-label" for="pre1opc1">Falso</label>
+      </div>
+
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="pre1opc2" name="pregunta21" required>
+        <label class="custom-control-label" for="pre1opc2">Verdadero</label>
+      </div>
+    </div>
+    <div class="col-sm-2">
+    </div>
+    <div class="col-sm-4">
+      <p><b>Pregunta 22.</b> Que operador se utiliza para unir el contenido dos arreglos: </p>
+
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="pre1opc1" name="pregunta22" required>
+        <label class="custom-control-label" for="pre1opc1">+</label>
+      </div>
+
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="pre1opc2" name="pregunta22" required>
+        <label class="custom-control-label" for="pre1opc2">.</label>
+      </div>
+
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="pre1opc3" name="pregunta22" required>
+        <label class="custom-control-label" for="pre1opc3">&</label>
+      </div>
+    </div>
+  </div>
+  <hr>
+
+  <div class="row">
+    <div class="col-sm-1">
+    </div>
+    <div class="col-sm-4">
+      <p><b>Pregunta 23.</b> Permite efectuar el objeto y que se ejecutan en el transcurso del programa: </p>
+
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="pre1opc1" name="pregunta23" required>
+        <label class="custom-control-label" for="pre1opc1">Variable</label>
+      </div>
+
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="pre1opc2" name="pregunta23" required>
+        <label class="custom-control-label" for="pre1opc2">Función</label>
+      </div>
+
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="pre1opc3" name="pregunta23" required>
+        <label class="custom-control-label" for="pre1opc3">Biblioteca</label>
+      </div>
+    </div>
+    <div class="col-sm-2">
+    </div>
+    <div class="col-sm-4">
+      <p><b>Pregunta 24.</b> Que función le pondremos a ejemplo el cual tiene parámetros por valor y devuelve el valor
+        de una suma: </p>
+
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="pre1opc1" name="pregunta24" required>
+        <label class="custom-control-label" for="pre1opc1">int ejemplo (int, int);</label>
+      </div>
+
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="pre1opc2" name="pregunta24" required>
+        <label class="custom-control-label" for="pre1opc2">void ejemplo (int, int, int);</label>
+      </div>
+
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="pre1opc2" name="pregunta24" required>
+        <label class="custom-control-label" for="pre1opc2">Int ejemplo [int, int];</label>
+      </div>
+    </div>
+  </div>
+  <hr>
+
+  <div class="row">
+    <div class="col-sm-1">
+    </div>
+    <div class="col-sm-4">
+      <p><b>Pregunta 25.</b> Como se declara una función con parámetros usando dato tipo arreglo: </p>
+
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="pre1opc1" name="pregunta25" required>
+        <label class="custom-control-label" for="pre1opc1">Void comer (int carne [ ] )</label>
+      </div>
+
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="pre1opc2" name="pregunta25" required>
+        <label class="custom-control-label" for="pre1opc2">Int carne [ ]</label>
+      </div>
+
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="pre1opc3" name="pregunta25" required>
+        <label class="custom-control-label" for="pre1opc3">Int carne = int carne [ ];</label>
+      </div>
+    </div>
+    <div class="col-sm-2">
+    </div>
+    <div class="col-sm-4">
+      <p><b>Pregunta 26.</b> Corresponde a una función con tipo de retorno nulo y sin parámetros: </p>
+
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="pre1opc1" name="pregunta26" required>
+        <label class="custom-control-label" for="pre1opc1">Int suma ( )</label>
+      </div>
+
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="pre1opc2" name="pregunta26" required>
+        <label class="custom-control-label" for="pre1opc2">double suma (int a, int b, double c)</label>
+      </div>
+
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="pre1opc3" name="pregunta26" required>
+        <label class="custom-control-label" for="pre1opc3">void suma ( )</label>
+      </div>
+    </div>
+  </div>
+  <hr>
+
+  <div class="row">
+    <div class="col-sm-1">
+    </div>
+    <div class="col-sm-4">
+      <p><b>Pregunta 27.</b> El registro es una agrupación de datos, como definirías un registro persona: </p>
+
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="pre1opc1" name="pregunta27" required>
+        <label class="custom-control-label" for="pre1opc1">Persona [ ];</label>
+      </div>
+
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="pre1opc2" name="pregunta27" required>
+        <label class="custom-control-label" for="pre1opc2">Struct persona (abre y cierra corchetes);</label>
+      </div>
+
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="pre1opc3" name="pregunta27" required>
+        <label class="custom-control-label" for="pre1opc3">Registro persona ( );</label>
+      </div>
+    </div>
+    <div class="col-sm-2">
+    </div>
+    <div class="col-sm-4">
+      <p><b>Pregunta 28.</b> Diferencia entre arreglo y registro: </p>
+
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="pre1opc1" name="pregunta28" required>
+        <label class="custom-control-label" for="pre1opc1">El arreglo puede almacenar n elementos de diferentes tipos y
+          el registro almacena elementos del mismo tipo</label>
+      </div>
+
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="pre1opc2" name="pregunta28" required>
+        <label class="custom-control-label" for="pre1opc2">El arreglo puede almacenar n elementos de un mismo tipo y el
+          registro almacena un elemento de diferentes tipos</label>
+      </div>
+
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="pre1opc3" name="pregunta28" required>
+        <label class="custom-control-label" for="pre1opc3">Son lo mismo </label>
+      </div>
+    </div>
+  </div>
+  <hr>
+
+  <div class="row">
+    <div class="col-sm-1">
+    </div>
+    <div class="col-sm-4">
+      <p><b>Pregunta 29.</b> Forma de cargar un registro persona es mediante la sentencia: </p>
+
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="pre1opc1" name="pregunta29" required>
+        <label class="custom-control-label" for="pre1opc1">Escribir (persona. nombre)</label>
+      </div>
+
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="pre1opc2" name="pregunta29" required>
+        <label class="custom-control-label" for="pre1opc2">Leer (persona. nombre)</label>
+      </div>
+
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="pre1opc3" name="pregunta29" required>
+        <label class="custom-control-label" for="pre1opc3">Cargar (persona. nombre)</label>
+      </div>
+    </div>
+    <div class="col-sm-2">
+    </div>
+    <div class="col-sm-4">
+      <p><b>Pregunta 30.</b> Si tenemos n: = 1 hasta 10 y queremos acceder a cada registro a través de los campos: </p>
+
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="pre1opc1" name="pregunta30" required>
+        <label class="custom-control-label" for="pre1opc1">Acceder (Personas[n]. nombre</label>
+      </div>
+
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="pre1opc2" name="pregunta30" required>
+        <label class="custom-control-label" for="pre1opc2">Cargar (Personas[n]. nombre);</label>
+      </div>
+
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="pre1opc3" name="pregunta30" required>
+        <label class="custom-control-label" for="pre1opc3">Leer (Personas[n]. nombre);</label>
+      </div>
+    </div>
+  </div>
+  <hr>
+
+  <div class="row">
+    <div class="col-sm-5">
+    </div>
+    <div class="col-sm-2">
       <button class="btn btn-primary">Terminar Exámen</button>
-    </form>
-    <br>
+    </div>
   </div>
-</div>
+</form>
+<br>

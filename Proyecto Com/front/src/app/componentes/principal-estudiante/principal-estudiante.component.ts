@@ -26,18 +26,6 @@ export class PrincipalEstudianteComponent implements OnInit {
   ngOnInit() {
     this.encriptada = this.id_usuario.split('%');
     console.log("id ", atob(this.encriptada[0]));
-    this.getAsignacionesUsuario(atob(this.encriptada[0]));
-  }
-
-  getAsignacionesUsuario(id_Usuario: string) {
-    this.asignacionService.getAsignacionesUsuario(id_Usuario)
-      .subscribe(res => {
-        this.asignacionService.asignaciones = res as Asignacion[];
-        if (Object.keys(res).length > 0) {
-          this.router.navigate([`dashboard/${btoa(atob(this.encriptada[0]))}`]);
-        } else {
-        }
-      });
   }
 
   calificar(){
