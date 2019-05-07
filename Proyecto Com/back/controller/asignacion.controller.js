@@ -28,6 +28,23 @@ asigns.getAsigUser = (request, response) => {
     });
 };
 
+//funcion que trae las asignaciones con toda la informacion de la unidad de un usuario en especifico
+asigns.getAsigUserFull = (request, response) => {
+    var id_Usuario = request.params.id_Usuario;
+
+    var consulta = `select au.id_Usuario, au.id_Unidad, au.Porcentaje_Avance, u.Nombre_Unidad, u.Des_Unidad
+    from Asignacion_Unidad as au
+    inner join unidad as u on au.id_Unidad = u.id_Unidad
+    where au.id_Usuario = ${id_Usuario}`;
+
+    //la conexion ejecute esa consulta
+    conection.query(consulta, function (error, results) {
+        if (error) throw response.json({ errorinfo: error });
+        else response.json(results);
+        console.log('Done lista Asignacion Unidad');
+    });
+};
+
 //Crear nueva asignacion
 asigns.postAsign = (request, response) => {
     var avance = request.body.Porcentaje_Avance;
@@ -38,7 +55,7 @@ asigns.postAsign = (request, response) => {
     //la conexion ejecute esa consulta
     conection.query(consulta, function (error, results) {
         if (error) throw response.json({ errorinfo: error });
-        else response.json({results:'Asignacion creada exitosamente'});
+        else response.json({});
         console.log('Asignacion creada correctamente');
     });
 }

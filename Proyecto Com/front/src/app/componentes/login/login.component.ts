@@ -34,10 +34,10 @@ export class LoginComponent implements OnInit {
     this.asignacionService.getAsignacionesUsuario(id_Usuario)
       .subscribe(res => {
         this.asignacionService.asignaciones = res as Asignacion[];
+        var hash = btoa(this.usuarioService.usuario[0].id_Usuario);
         if (Object.keys(res).length > 0) {
-          this.router.navigate([`dashboard/${this.usuarioService.usuario}`]);
-        } else {
-          var hash = btoa(this.usuarioService.usuario[0].id_Usuario);
+          this.router.navigate([`dashboard/${hash}`]);
+        } else {          
           this.router.navigate([`principal-estudiante/${hash}`]);
         }
       });
