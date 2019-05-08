@@ -122,7 +122,7 @@ export class PrincipalEstudianteComponent implements OnInit {
           this.asignacionService.asignacion.id_Unidad = index + 1;
           this.asignacionService.asignacion.id_Usuario = this.id;
           this.asignacionService.postAsignacionUsuario(this.asignacionService.asignacion)
-            .subscribe(res => {
+          .subscribe(res => {
               auxContAsignaciones += 1;
               if (Object.keys(res).length > 0) {
                 alert("Ocurrió un error al realizar las asignaciones");
@@ -146,7 +146,7 @@ export class PrincipalEstudianteComponent implements OnInit {
       .subscribe(res => {
         this.asignacionService.asignaciones = res as Asignacion[];
         if (Object.keys(res).length > 0) {
-          this.router.navigate([`dashboard/${id_Usuario}`]);
+          this.router.navigate([`dashboard/${btoa(id_Usuario)}`]);
         } else {
           alert("Ocurrió un error, usuario sin asignaciones");
         }

@@ -5,7 +5,7 @@ var dbconnection =()=>{ //crea una funcion que conecta con la base de datos
 
     host :'localhost',
     user : 'root',
-    password : '',
+    password : 'root',
     database : 'programa',
     port:'3306'
     });
