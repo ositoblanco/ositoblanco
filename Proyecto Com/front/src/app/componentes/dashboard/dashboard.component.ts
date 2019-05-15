@@ -15,6 +15,7 @@ export class DashboardComponent implements OnInit {
   encriptada: string[];
   id_usuario: string;
   id: number;
+  preguntas_correctas: number = 0;
 
   constructor(private usuarioService: UsuarioService, private asignacionService: AsignacionService, private router: Router) {
     this.ruta = this.router.url.split('/');
@@ -22,6 +23,7 @@ export class DashboardComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.asignacionService.asignacionFull = new AsignacionFull;
     this.encriptada = this.id_usuario.split('%');
     this.id = parseInt(atob(this.encriptada[0]));
     this.obtenerAsignaciones(""+this.id);
@@ -39,6 +41,43 @@ export class DashboardComponent implements OnInit {
           alert("Ocurrió un error, usuario sin asignaciones");
         }
       });
+  }
+
+  userSeleccionado(asignacion: AsignacionFull){
+    this.asignacionService.asignacionFull = new AsignacionFull;
+    this.asignacionService.asignacionFull = asignacion;
+    console.log("Si ejecuta la funcion", asignacion.id_Unidad+" "+ asignacion.id_Usuario);
+  }
+
+  calificarTest(){
+    var elementos = document.forms["formExamen"].elements;
+
+    var checks = 0;
+    for (let i = 0; i < elementos.length; i++) {
+      if (elementos[i].checked) {
+        checks += 1;
+      }
+    }
+
+    if (checks == 4) {
+      for (let i = 0; i < elementos.length; i++) {
+        if (elementos[i].checked) {
+          if (elementos[i].id == "pre1opc3") {
+            this.preguntas_correctas += 1;
+          } else if (elementos[i].id == "pre2opc3") {
+            this.preguntas_correctas += 1;
+          } else if (elementos[i].id == "pre3opc2") {
+            this.preguntas_correctas += 1;
+          } else if (elementos[i].id == "pre4opc3") {
+            this.preguntas_correctas += 1;
+          }
+        }
+      }
+      alert("Preguntas correctas: "+this.preguntas_correctas)
+
+    } else {
+      alert("Por favor conteste todas las preguntas!")
+    }
   }
 
 }

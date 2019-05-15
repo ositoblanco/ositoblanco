@@ -3,41 +3,135 @@
 <div class="container col-sm-10">
   <div class="row">
     <div class="col-sm-4" *ngFor="let asignacion of asignacionService.asignacionesFull">
-    <div class="card">
-      <div class="card-header">
-        Unidad {{asignacion.id_Unidad}}
-      </div>
-      <div class="card-body">
-        <h5 class="card-title">{{asignacion.Nombre_Unidad}}</h5>
-        <p class="card-text">{{asignacion.Des_Unidad}}</p>
-        <a href="../../../assets/PDF/{{asignacion.id_Unidad}}.pdf" target="_blank" class="btn btn-primary">Descargar PDF</a>&nbsp;&nbsp;&nbsp;
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalTest">
+      <div class="card">
+        <div class="card-header">
+          Unidad {{asignacion.id_Unidad}}
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">{{asignacion.Nombre_Unidad}}</h5>
+          <p class="card-text">{{asignacion.Des_Unidad}}</p>
+          <a href="../../../assets/PDF/{{asignacion.id_Unidad}}.pdf" target="_blank" class="btn btn-primary">Descargar
+            PDF</a>&nbsp;&nbsp;&nbsp;
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalTest"
+            (click)="userSeleccionado(asignacion)">
             Test
           </button>
+        </div>
       </div>
+      <br>
     </div>
-    <br>
-  </div>
   </div>
 </div>
-  
-  <!-- Modal -->
-  <div class="modal fade" id="modalTest" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Test Unidad ?</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
+
+<!-- Modal -->
+<div class="modal fade bd-example-modal-xl" id="modalTest" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog modal-xl" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Test Unidad {{this.asignacionService.asignacionFull.id_Unidad}}
+        </h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <form class="was-validated" name="formExamen" #formExamen="ngForm" (ngSubmit)="calificarTest()">
         <div class="modal-body">
-          ...
+          <div class="row">
+            <div class="col-sm-1">
+            </div>
+            <div class="col-sm-4">
+              <p><b>Pregunta 1.</b> Int, char, float, string y boolean son: </p>
+
+              <div class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="pre1opc1" name="pregunta1" required>
+                <label class="custom-control-label" for="pre1opc1">Sentencias de control</label>
+              </div>
+
+              <div class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="pre1opc2" name="pregunta1" required>
+                <label class="custom-control-label" for="pre1opc2">Funciones</label>
+              </div>
+
+              <div class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="pre1opc3" name="pregunta1" required>
+                <label class="custom-control-label" for="pre1opc3">Tipo de datos</label>
+              </div>
+            </div>
+            <div class="col-sm-2">
+            </div>
+            <div class="col-sm-4">
+              <p><b>Pregunta 2.</b> Qué tipo de variable es: char variable: </p>
+
+              <div class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="pre2opc1" name="pregunta2" required>
+                <label class="custom-control-label" for="pre2opc1">Cadena</label>
+              </div>
+
+              <div class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="pre2opc2" name="pregunta2" required>
+                <label class="custom-control-label" for="pre2opc2">Entero</label>
+              </div>
+
+              <div class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="pre2opc3" name="pregunta2" required>
+                <label class="custom-control-label" for="pre2opc3">Carácter</label>
+              </div>
+            </div>
+          </div>
+
+          <hr>
+
+          <div class="row">
+              <div class="col-sm-1">
+              </div>
+              <div class="col-sm-4">
+                <p><b>Pregunta 3.</b> Permite el ingreso de datos: </p>
+          
+                <div class="custom-control custom-radio">
+                  <input type="radio" class="custom-control-input" id="pre3opc1" name="pregunta3" required>
+                  <label class="custom-control-label" for="pre3opc1">Impresión de resultados</label>
+                </div>
+          
+                <div class="custom-control custom-radio">
+                  <input type="radio" class="custom-control-input" id="pre3opc2" name="pregunta3" required>
+                  <label class="custom-control-label" for="pre3opc2">Datos de entrada</label>
+                </div>
+          
+                <div class="custom-control custom-radio">
+                  <input type="radio" class="custom-control-input" id="pre3opc3" name="pregunta3" required>
+                  <label class="custom-control-label" for="pre3opc3">Procesamientos de datos</label>
+                </div>
+              </div>
+              <div class="col-sm-2">
+              </div>
+              <div class="col-sm-4">
+                <p><b>Pregunta 4.</b> Qué es un algoritmo: </p>
+          
+                <div class="custom-control custom-radio">
+                  <input type="radio" class="custom-control-input" id="pre4opc1" name="pregunta4" required>
+                  <label class="custom-control-label" for="pre4opc1">Diagrama de flujo </label>
+                </div>
+          
+                <div class="custom-control custom-radio">
+                  <input type="radio" class="custom-control-input" id="pre4opc2" name="pregunta4" required>
+                  <label class="custom-control-label" for="pre4opc2">Un programa</label>
+                </div>
+          
+                <div class="custom-control custom-radio">
+                  <input type="radio" class="custom-control-input" id="pre4opc3" name="pregunta4" required>
+                  <label class="custom-control-label" for="pre4opc3">Serie de instrucciones que representan una solución </label>
+                </div>
+              </div>
+            </div>
+            
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerra</button>
-          <button type="button" class="btn btn-primary">Enviar</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+          <button type="submit" class="btn btn-primary">Enviar</button>
         </div>
-      </div>
+      </form>
     </div>
   </div>
+</div>

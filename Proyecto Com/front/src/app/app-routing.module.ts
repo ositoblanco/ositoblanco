@@ -5,13 +5,15 @@ import { InicioComponent } from './componentes/inicio/inicio.component';
 import { RegistroComponent } from './componentes/registro/registro.component';
 import { PrincipalEstudianteComponent } from './componentes/principal-estudiante/principal-estudiante.component';
 import { DashboardComponent } from './componentes/dashboard/dashboard.component';
+import { LoginGuard } from './login.guard';
+import { NoLoginGuard } from './no-login.guard';
 
 const routes: Routes = [
-  { path: 'login', component: LoginComponent },
-  { path: 'registro', component: RegistroComponent},
-  { path: 'inicio', component: InicioComponent},
-  { path: 'principal-estudiante/:id_usuario', component: PrincipalEstudianteComponent},
-  { path: 'dashboard/:id_usuario', component: DashboardComponent},
+  { path: 'login', component: LoginComponent, canActivate: [NoLoginGuard]},
+  { path: 'registro', component: RegistroComponent, canActivate: [NoLoginGuard]},
+  { path: 'inicio', component: InicioComponent, canActivate: [NoLoginGuard]},
+  { path: 'principal-estudiante/:id_usuario', component: PrincipalEstudianteComponent, canActivate: [LoginGuard]},
+  { path: 'dashboard/:id_usuario', component: DashboardComponent, canActivate: [LoginGuard]},
   { path: '**', pathMatch: 'full', redirectTo: 'inicio'}
 ];
 

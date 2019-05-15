@@ -10,6 +10,7 @@ export class AsignacionService {
   asignacion: Asignacion;
   asignaciones: Asignacion[];
   asignacionesFull: AsignacionFull[];
+  asignacionFull: AsignacionFull;
 
   readonly URL_API = 'http://localhost:3000/asignaciones';
 

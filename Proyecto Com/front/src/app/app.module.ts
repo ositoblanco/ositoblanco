@@ -16,6 +16,8 @@ import { RegistroComponent } from './componentes/registro/registro.component';
 import { BarraNavegacionComponent } from './componentes/barra-navegacion/barra-navegacion.component';
 import { PrincipalEstudianteComponent } from './componentes/principal-estudiante/principal-estudiante.component';
 import { DashboardComponent } from './componentes/dashboard/dashboard.component';
+import { LoginGuard } from './login.guard';
+import { NoLoginGuard } from './no-login.guard';
 
 @NgModule({
   declarations: [
@@ -37,7 +39,7 @@ import { DashboardComponent } from './componentes/dashboard/dashboard.component'
     FormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [LoginGuard, NoLoginGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

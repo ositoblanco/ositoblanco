@@ -22,6 +22,7 @@ export class RegistroComponent implements OnInit {
       this.usuarioService.postUsuario(form.value)
         .subscribe(res => {
           alert("Usuario registrado exitosamente!");
+          this.router.navigate([`login`]);
           this.resetForm(form);
         });
     }else{

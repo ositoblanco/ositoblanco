@@ -35,6 +35,7 @@ export class LoginComponent implements OnInit {
       .subscribe(res => {
         this.asignacionService.asignaciones = res as Asignacion[];
         var hash = btoa(this.usuarioService.usuario[0].id_Usuario);
+        localStorage.setItem("id_Usuario", this.usuarioService.usuario[0].id_Usuario);
         if (Object.keys(res).length > 0) {
           this.router.navigate([`dashboard/${hash}`]);
         } else {          
