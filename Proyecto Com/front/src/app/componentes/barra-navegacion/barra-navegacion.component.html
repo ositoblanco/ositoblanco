@@ -18,7 +18,7 @@
     </ul>
     <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button type="button" class="btn btn-danger" *ngIf="!localStorage.getItem('id_Usuario') === null" (click)="salir()">Salir</button>
+      <button type="button" class="btn btn-danger" *ngIf="this.storage" (click)="salir()">Salir</button>
     </form>
   </div>
 </nav>

@@ -9,8 +9,11 @@ import { Router } from '@angular/router';
 export class BarraNavegacionComponent implements OnInit {
 
   constructor(private router: Router) { }
-
+  storage = false;
   ngOnInit() {
+    if(localStorage.length != 0){
+      this.storage = true;
+    }
   }
 
   salir(){
