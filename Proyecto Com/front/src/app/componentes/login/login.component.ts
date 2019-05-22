@@ -38,7 +38,7 @@ export class LoginComponent implements OnInit {
         localStorage.setItem("id_Usuario", this.usuarioService.usuario[0].id_Usuario);
         if (Object.keys(res).length > 0) {
           this.router.navigate([`dashboard/${hash}`]);
-        } else {          
+        } else {
           this.router.navigate([`principal-estudiante/${hash}`]);
         }
       });

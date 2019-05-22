@@ -73,7 +73,8 @@ export class DashboardComponent implements OnInit {
           }
         }
       }
-      alert("Preguntas correctas: "+this.preguntas_correctas)
+      alert("Preguntas correctas: "+this.preguntas_correctas);
+      this.preguntas_correctas = 0;
 
     } else {
       alert("Por favor conteste todas las preguntas!")
