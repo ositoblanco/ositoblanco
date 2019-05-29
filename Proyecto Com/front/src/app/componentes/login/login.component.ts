@@ -36,10 +36,15 @@ export class LoginComponent implements OnInit {
         this.asignacionService.asignaciones = res as Asignacion[];
         var hash = btoa(this.usuarioService.usuario[0].id_Usuario);
         localStorage.setItem("id_Usuario", this.usuarioService.usuario[0].id_Usuario);
-        if (Object.keys(res).length > 0) {
-          this.router.navigate([`dashboard/${hash}`]);
-        } else {
-          this.router.navigate([`principal-estudiante/${hash}`]);
+        localStorage.setItem("tipo_Usuario", this.usuarioService.usuario[0].id_Rol);
+        if(this.usuarioService.usuario[0].id_Rol == 1){
+          this.router.navigate([`administrador`]);
+        }else if(this.usuarioService.usuario[0].id_Rol == 2){
+          if (Object.keys(res).length > 0) {
+            this.router.navigate([`dashboard/${hash}`]);
+          } else {
+            this.router.navigate([`principal-estudiante/${hash}`]);
+          }
         }
       });
   }

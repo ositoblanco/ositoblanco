@@ -23,4 +23,8 @@ export class UsuarioService {
    loginUsuario(usuario: Usuario){
     return this.http.get(this.URL_API+`/login/${usuario.Usuario_Usuario}/${usuario.Clave_Usuario}`);
    }
+
+   getUsuarios(){
+     return this.http.get(this.URL_API);
+   }
 }

@@ -5,6 +5,7 @@ const asignctrl = require('../controller/asignacion.controller');
 router.get('/', asignctrl.getAsigns);
 router.get('/:id_Usuario', asignctrl.getAsigUser);
 router.get('/full/:id_Usuario', asignctrl.getAsigUserFull);
+router.get('/full/all/all', asignctrl.getTodasAsigUserFull);
 router.post('/', asignctrl.postAsign);
 router.put('/update', asignctrl.udapteAsign);
 router.delete('/delete/:id_Usuario/:id_Unidad', asignctrl.deleteAsign);

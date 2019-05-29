@@ -45,6 +45,21 @@ asigns.getAsigUserFull = (request, response) => {
     });
 };
 
+//funcion que trae todas las asignaciones con toda la informacion de la unidad de todos kos usuarios
+asigns.getTodasAsigUserFull = (request, response) => {
+
+    var consulta = `select au.id_Usuario, au.id_Unidad, au.Porcentaje_Avance, u.Nombre_Unidad, u.Des_Unidad
+    from Asignacion_Unidad as au
+    inner join unidad as u on au.id_Unidad = u.id_Unidad`;
+
+    //la conexion ejecute esa consulta
+    conection.query(consulta, function (error, results) {
+        if (error) throw response.json({ errorinfo: error });
+        else response.json(results);
+        console.log('Done lista Asignacion Unidad');
+    });
+};
+
 //Crear nueva asignacion
 asigns.postAsign = (request, response) => {
     var avance = request.body.Porcentaje_Avance;

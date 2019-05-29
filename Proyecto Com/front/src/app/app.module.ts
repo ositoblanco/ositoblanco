@@ -18,6 +18,7 @@ import { PrincipalEstudianteComponent } from './componentes/principal-estudiante
 import { DashboardComponent } from './componentes/dashboard/dashboard.component';
 import { LoginGuard } from './login.guard';
 import { NoLoginGuard } from './no-login.guard';
+import { PanelAdminComponent } from './componentes/panel-admin/panel-admin.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { NoLoginGuard } from './no-login.guard';
     RegistroComponent,
     BarraNavegacionComponent,
     PrincipalEstudianteComponent,
-    DashboardComponent
+    DashboardComponent,
+    PanelAdminComponent
   ],
   imports: [
     BrowserModule,

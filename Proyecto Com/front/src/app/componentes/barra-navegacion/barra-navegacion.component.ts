@@ -19,6 +19,7 @@ export class BarraNavegacionComponent implements OnInit {
   salir(){
     this.router.navigate([`inicio`]);
     localStorage.removeItem("id_Usuario");
+    localStorage.removeItem("tipo_Usuario");
   }
 
 }

@@ -16,7 +16,7 @@ const connection = dbconnection(); //crea una constante conecion y la iguala a l
 connection.connect();
 connection.query('SELECT 1 + 1 AS solution', function (error, results, fields){
     if(error) throw error;
-    console.log('Se conecto a la DB!!!.. -->', results[0].solution);
+    console.log('Se conecto a la DB!!!..', results[0].solution);
 });
 connection.end();
 

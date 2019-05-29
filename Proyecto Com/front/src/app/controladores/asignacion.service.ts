@@ -26,6 +26,10 @@ export class AsignacionService {
     return this.http.get(this.URL_API+`/full/${id_Usuario}`);
   }
 
+  getTodasAsignacionesUsuariosFull(){
+    return this.http.get(this.URL_API+`/full/all/all`);
+  }
+
   postAsignacionUsuario(asignacion: Asignacion){
     return this.http.post(this.URL_API, asignacion);
   }

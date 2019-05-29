@@ -9,6 +9,12 @@ create database programa;
 select * from usuario;
 desc usuario;
 select * from usuario where id_Usuario = 4;
+desc usuario;
+
+select * from usuario as u
+inner join asignacion_unidad as au on u.id_Usuario = au.id_Usuario
+inner join unidad as un on au.id_Unidad = un.id_Unidad
+where u.id_Rol = 2;
 
 -- Insercion de un usuario en la tabla usuario
 insert into usuario (id_Usuario, Nombre_Usuario, Clave_Usuario, Correo_Usuario, Cedula_Usuario, Usuario_Usuario, Apellido_Usuario, id_Rol) values (null, 'Andrea', 'andrea123', 'andrea@com', '00000', 'Andy', 'Cruz', 1);
@@ -79,7 +85,11 @@ insert into Asignacion_Unidad (id_Usuario, id_Unidad, Porcentaje_Avance) values 
 update Asignacion_Unidad set Porcentaje_Avance = 10 where id_Unidad = 3 and id_Usuario = 4;
 
 -- Eliminar una asignacion en la tabla asignacion
-delete from Asignacion_Unidad where id_Unidad = 3 and id_Usuario = 4;
+select * from Asignacion_Unidad where id_Usuario = 2;
 
+delete from Asignacion_Unidad where id_Usuario=2;
 
+select au.id_Usuario, au.id_Unidad, au.Porcentaje_Avance, u.Nombre_Unidad, u.Des_Unidad
+    from Asignacion_Unidad as au
+    inner join unidad as u on au.id_Unidad = u.id_Unidad
 
