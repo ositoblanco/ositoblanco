@@ -28,6 +28,24 @@ users.getUserLogin = (request, response) => {
     });
 };
 
+//funcion que trae un usuario con usuario o cedula o correo
+users.getUserRegistro = (request, response) => {
+    var usuario = request.params.usuario;
+    var correo = request.params.correo;
+    var cedula = request.params.cedula;
+    var consulta = `select * from usuario
+    where Usuario_Usuario = '${usuario}'
+    or Correo_Usuario = '${correo}'
+    or Cedula_Usuario = ${cedula}`;
+
+    //la conexion ejecute esa consulta
+    conection.query(consulta, function (error, results) {
+        if (error) throw response.json({ errorinfo: error });
+        else response.json(results);
+        console.log('Done lista usuarios');
+    });
+};
+
 //Crear usuario 
 users.postUser = (request, response) => {
     var nombre = request.body.Nombre_Usuario;

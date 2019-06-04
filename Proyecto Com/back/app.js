@@ -6,7 +6,6 @@ var logger = require('morgan');
 var cors = require('cors');
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
 
 var app = express();
 const router = express.Router();
@@ -24,13 +23,13 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
 
 //rutas mias
 app.use('/usuarios', require('./routes/usuarios.routes'));
 app.use('/rols', require('./routes/rols.routes'));
 app.use('/unidades', require('./routes/unidades.routes'));
 app.use('/asignaciones', require('./routes/asignaciones.routes'));
+app.use('/preguntas', require('./routes/preguntas.routes'));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

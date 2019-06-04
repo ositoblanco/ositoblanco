@@ -33,4 +33,8 @@ export class AsignacionService {
   postAsignacionUsuario(asignacion: Asignacion){
     return this.http.post(this.URL_API, asignacion);
   }
+
+  putAsignacionUsuario(asignacion: Asignacion){
+    return this.http.put(this.URL_API+'/update', asignacion);
+  }
 }

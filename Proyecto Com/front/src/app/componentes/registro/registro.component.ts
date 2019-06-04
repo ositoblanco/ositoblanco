@@ -30,6 +30,18 @@ export class RegistroComponent implements OnInit {
     }
   }
 
+  verificarUsuario(form: NgForm){
+    this.usuarioService.getUsuarioRegistro(form.value)
+      .subscribe(res => {
+        this.usuarioService.usuario = res as Usuario;
+        if(Object.keys(res).length > 0){
+          alert("Este usuario ya se encuentra registrado!");
+        }else{
+          this.registro(form);
+        }
+      });
+  }
+
   resetForm(form?: NgForm) {
     if (form) {
       form.reset();

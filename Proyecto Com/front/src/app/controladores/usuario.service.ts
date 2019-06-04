@@ -27,4 +27,8 @@ export class UsuarioService {
    getUsuarios(){
      return this.http.get(this.URL_API);
    }
+
+   getUsuarioRegistro(usuario: Usuario){
+    return this.http.get(this.URL_API+`/registro/${usuario.Usuario_Usuario}/${usuario.Correo_Usuario}/${usuario.Cedula_Usuario}`);
+   }
 }
