@@ -16,10 +16,10 @@ DEFAULT CHARACTER SET = latin1;
 -- -----------------------------------------------------
 CREATE TABLE `pregunta` (
   `id_pregunta` INT NOT NULL AUTO_INCREMENT,
-  `Desc_Pregunta` VARCHAR(200) NOT NULL,
-  `opc1_pregunta` VARCHAR(100) NOT NULL,
-  `Opc2_Pregunta` VARCHAR(100) NOT NULL,
-  `Opc3_Pregunta` VARCHAR(100) NULL,
+  `Desc_Pregunta` VARCHAR(300) NOT NULL,
+  `opc1_pregunta` VARCHAR(300) NOT NULL,
+  `Opc2_Pregunta` VARCHAR(300) NOT NULL,
+  `Opc3_Pregunta` VARCHAR(300) NULL,
   `Respuesta_Pregunta` INT(11) NOT NULL,
   `id_Unidad` INT(11) NOT NULL,
   PRIMARY KEY (`id_pregunta`),

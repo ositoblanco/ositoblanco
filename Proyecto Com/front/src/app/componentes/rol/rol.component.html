@@ -1,3 +1,33 @@
-<p>
-  rol works!
-</p>
+<app-barra-navegacion></app-barra-navegacion>
+<br>
+<div class="container col-sm-10">
+    <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Identificacion</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Apellido</th>
+            <th scope="col">Usuario</th>
+            <th scope="col">Contraseña</th>
+            <th scope="col">Correo</th>
+            <th scope="col">Rol</th>
+            <th scope="col">Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let usuario of usuarioService.usuarios">
+            <th scope="row" >{{usuario.Cedula_Usuario}}</th>
+            <td>{{usuario.Nombre_Usuario}}</td>
+            <td>{{usuario.Apellido_Usuario}}</td>
+            <td>{{usuario.Usuario_Usuario}}</td>
+            <td>{{usuario.Clave_Usuario}}</td>
+            <td>{{usuario.Correo_Usuario}}</td>
+            <td *ngIf="usuario.id_Rol == 2">Estudiante</td>
+            <td *ngIf="usuario.id_Rol == 1">Administrador</td>
+            <td>
+              <button type="button" class="btn btn-success" (click)="cambiarRol(usuario.id_Usuario, usuario.id_Rol)">Cambiar Rol</button>
+            </td>
+          </tr>
+        </tbody>
+      </table> 
+</div>

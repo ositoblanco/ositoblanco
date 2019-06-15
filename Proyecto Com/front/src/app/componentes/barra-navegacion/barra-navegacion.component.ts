@@ -10,9 +10,11 @@ export class BarraNavegacionComponent implements OnInit {
 
   constructor(private router: Router) { }
   storage = false;
+  tipo_usuario = "";
   ngOnInit() {
     if(localStorage.length != 0){
       this.storage = true;
+      this.tipo_usuario = localStorage.getItem("tipo_Usuario");
     }
   }
 

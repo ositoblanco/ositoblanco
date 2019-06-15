@@ -8,6 +8,13 @@ create database programa;
 
 -- Consulta que trae los usuarios de la tabla usuarios 
 select * from usuario;
+select * from usuario
+where Usuario_Usuario = 'cazb999'
+or Correo_Usuario = ''
+or Cedula_Usuario = 1234;
+
+update usuario set id_Rol = 2 where id_Usuario = 1;
+
 show tables;
 desc usuario;
 select * from usuario where id_Usuario = 4;
@@ -84,7 +91,7 @@ insert into Asignacion_Unidad (id_Usuario, id_Unidad, Porcentaje_Avance) values 
 insert into Asignacion_Unidad (id_Usuario, id_Unidad, Porcentaje_Avance) values (1, 3, 50);
 
 -- Actualizar una asignacion en la tabla asignacion
-update Asignacion_Unidad set Porcentaje_Avance = 10 where id_Unidad = 3 and id_Usuario = 4;
+update Asignacion_Unidad set Porcentaje_Avance = 25 where id_Unidad = 1 and id_Usuario = 1;
 
 -- Eliminar una asignacion en la tabla asignacion
 select * from Asignacion_Unidad where id_Usuario = 2;

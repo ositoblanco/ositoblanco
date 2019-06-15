@@ -19,6 +19,7 @@ import { DashboardComponent } from './componentes/dashboard/dashboard.component'
 import { LoginGuard } from './login.guard';
 import { NoLoginGuard } from './no-login.guard';
 import { PanelAdminComponent } from './componentes/panel-admin/panel-admin.component';
+import { FooterComponent } from './componentes/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { PanelAdminComponent } from './componentes/panel-admin/panel-admin.compo
     BarraNavegacionComponent,
     PrincipalEstudianteComponent,
     DashboardComponent,
-    PanelAdminComponent
+    PanelAdminComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

@@ -88,6 +88,21 @@ users.udapteUser = (request, response) => {
     });
 }
 
+//Actualizar ROL a usuario
+users.updateRolUser = (request, response) => {
+    var idRol = request.params.id_Rol;
+    var idUsuario = request.params.id_Usuario;
+
+    var consulta = `update usuario set id_Rol = ${idRol} where id_Usuario = ${idUsuario}`;
+
+    //la conexion ejecute esa consulta
+    conection.query(consulta, function (error, results) {
+        if (error) throw response.json({ errorinfo: error });
+        else response.json({results:'Rol de usuario actualizado exitosamente'});
+        console.log('Rol de usuario actualizado correctamente');
+    });
+}
+
 //funcion que elimina un usuario
 
 users.deleteUser = (request, response) => {

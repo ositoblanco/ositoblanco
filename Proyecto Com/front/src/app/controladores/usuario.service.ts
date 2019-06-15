@@ -31,4 +31,8 @@ export class UsuarioService {
    getUsuarioRegistro(usuario: Usuario){
     return this.http.get(this.URL_API+`/registro/${usuario.Usuario_Usuario}/${usuario.Correo_Usuario}/${usuario.Cedula_Usuario}`);
    }
+
+   updateRolUsuario(id_Rol: number, id_Usuario: number){
+    return this.http.put(this.URL_API+`/update/${id_Rol}/${id_Usuario}`,null);
+   }
 }

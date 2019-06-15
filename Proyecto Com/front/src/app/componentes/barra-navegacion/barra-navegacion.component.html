@@ -15,6 +15,12 @@
       <li class="nav-item active">
         <a class="nav-link" href="/registro">Registrarse <span class="sr-only">(current)</span></a>
       </li>
+      <li class="nav-item active">
+          <a class="nav-link" href="/administrador" *ngIf="this.storage && this.tipo_usuario == 1">Administrar<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+            <a class="nav-link" href="/rol" *ngIf="this.storage && this.tipo_usuario == 1">Rol<span class="sr-only">(current)</span></a>
+          </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
